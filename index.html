@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard IoT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <!-- Menampilkan data JSON pertama -->
+  <div class="data-box">
+    <h3>Data 1</h3>
+    <p>Suhu: {{ sensorData[0].suhu }} °C</p>
+    <p>Humidi: {{ sensorData[0].humidi }} %</p>
+    <p>Suhu Rata-Rata: {{ sensorData[0].suhurata }} °C</p>
+    <p>Nilai Suhu Max & Humid Max: {{ sensorData[0].nilai_suhu_max_humid_max }}</p>
+  </div>
+
+  <!-- Menampilkan data JSON kedua -->
+  <div class="data-box">
+    <h3>Data 2</h3>
+    <p>Index: {{ sensorData[1].index }}</p>
+    <p>Suhu: {{ sensorData[1].suhu }} °C</p>
+    <p>Humidi: {{ sensorData[1].humidi }} %</p>
+    <p>Kecerahan: {{ sensorData[1].kecerahan }}</p>
+    <p>Timestamp: {{ sensorData[1].timestamp }}</p>
+  </div>
+
+  <!-- Menampilkan data JSON ketiga -->
+  <div class="data-box">
+    <h3>Data 3</h3>
+    <p>Index: {{ sensorData[2].index }}</p>
+    <p>Suhu: {{ sensorData[2].suhu }} °C</p>
+    <p>Humidi: {{ sensorData[2].humidi }} %</p>
+    <p>Kecerahan: {{ sensorData[2].kecerahan }}</p>
+    <p>Timestamp: {{ sensorData[2].timestamp }}</p>
+  </div>
+
+  <button @click="fetchData">Update Data</button>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>
